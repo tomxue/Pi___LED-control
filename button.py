@@ -13,6 +13,6 @@ print ("linke r_led pin 17 , linker_button pin 18 (BCM GPIO)\n")
 
 while True:
        if GPIO.input(button_pin):
-                      GPIO.output(led_pin,True)
+                     GPIO.output(led_pin,True)
        else :
                      GPIO.output(led_pin,False)

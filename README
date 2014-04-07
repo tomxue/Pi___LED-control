@@ -18,7 +18,7 @@ Run:
     java test
 
 ========================
-For file button.c: this code cannot set input GPIO's pullup/pulldown mode, so it is what we need
+For file button.c:
 
     Compile:
         cc -o button button.c -lwiringPi

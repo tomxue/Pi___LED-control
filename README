@@ -22,3 +22,7 @@ For file button.c:
 
     Compile:
         cc -o button button.c -lwiringPi
+========================
+
+TODO:
+    Make a program to detect button input as interrupt, refer to my pico project

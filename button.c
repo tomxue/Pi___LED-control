@@ -14,19 +14,17 @@ int main ()
 
     if (wiringPiSetup() == -1)
     {
-        printf("Setup wiringPi failed!");
+        printf("Setup wiringPi failed!\n");
         return 1;
     }
 
     pinMode(led_pin, OUTPUT); // set linker_led mode to output
     pinMode(button_pin, INPUT); // set linker_button mode to input
-    while(1)
+    //while(1)
     {
         if( digitalRead(button_pin) )
-            digitalWrite(led_pin, HIGH); // output a high level
+            printf("1"); // output a high level
         else
-            digitalWrite(led_pin, LOW); // output a low level
+            printf("0"); // output a low level
     }
-
-    return 0;
 }

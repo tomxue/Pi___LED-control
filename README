@@ -3,7 +3,7 @@ Java-Shell___LED-control
 
 to control LED on Raspberry by Java, which will invoke a shell code (apply wiringPi)
 
-
+Some example code is from link: http://www.oschina.net/question/1425530_140979
 
 ========================
 For java code to invoke shell:

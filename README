@@ -3,6 +3,11 @@ Java-Shell___LED-control
 
 to control LED on Raspberry by Java, which will invoke a shell code (apply wiringPi)
 
+
+
+========================
+For java code to invoke shell:
+
 Precondition:
     install wiringPi on Raspberry
 
@@ -11,3 +16,9 @@ Compile:
 
 Run:
     java test
+
+========================
+For file button.c: this code cannot set input GPIO's pullup/pulldown mode, so it is what we need
+
+    Compile:
+        cc -o button button.c -lwiringPi

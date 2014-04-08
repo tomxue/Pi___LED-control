@@ -3,7 +3,7 @@ import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class testReturn {
+public class testButton {
 	public static void main(String[] args) throws Exception {
 		// 定义传入shell脚本的参数，将参数放入字符串数组里
 		String cmds[] = new String[9];

@@ -8,7 +8,7 @@ public class testButton {
 		// 定义传入shell脚本的参数，将参数放入字符串数组里
 		String cmds[] = new String[9];
 		// cmds[0] = "./return.sh";
-		cmds[0] = "./button";
+		cmds[0] = "./button_poll";
 		cmds[1] = "1"; // 任务省Id
 		cmds[2] = "2";// 插入任务人所属的纳税主体标识
 		cmds[3] = "3";// 任务期间

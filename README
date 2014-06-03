@@ -23,3 +23,8 @@ For file button.c:
     Compile:
         cc -o button button.c -lwiringPi
 ========================
+For final solution, go into the directory: final:
+    Compile:
+        gcc -lwiringPi -o gpio-interrupt gpio-interrupt.c
+    Run:
+        ./gpio-interrupt

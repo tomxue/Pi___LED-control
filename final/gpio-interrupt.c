@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <sys/time.h>
 #include <wiringPi.h>
+#include <stdlib.h>
 
 // Which GPIO pin we're using: Tom Xue, using GPIO_GEN1(GPIO18) as button input
 #define PIN 1
@@ -27,9 +28,11 @@ void handle(void) {
 	if (diff > IGNORE_CHANGE_BELOW_USEC) {
 		if (state) {
 			printf("Falling\n");
+            system("./leds-red.sh");
 		}
 		else {
 			printf("Rising\n");
+            system("./leds-blue.sh");
 		}
 
 		state = !state;

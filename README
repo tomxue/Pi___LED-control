@@ -28,3 +28,8 @@ For final solution, go into the directory: final:
         gcc -lwiringPi -o gpio-interrupt gpio-interrupt.c
     Run:
         ./gpio-interrupt
+
+    Java code:
+        javac ThreadTester.java
+        sudo su
+        java ThreadTester

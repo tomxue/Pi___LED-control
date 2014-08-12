@@ -31,5 +31,4 @@ For final solution, go into the directory: final:
 
     Java code:
         javac ThreadTester.java
-        sudo su
         java ThreadTester

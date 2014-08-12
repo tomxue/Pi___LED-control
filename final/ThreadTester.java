@@ -48,6 +48,7 @@ public class ThreadTester
         Thread t1 = new Thread(new ThreadTesterA());
         Thread t2 = new Thread(new ThreadTesterB());
         t1.start();
+        t1.setPriority(Thread.MAX_PRIORITY);
         //t1.join(); // wait t1 to be finished
         t2.start();
         //t2.join();

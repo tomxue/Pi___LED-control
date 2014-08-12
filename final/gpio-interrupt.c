@@ -29,10 +29,9 @@ void handle(void)
     if (diff > IGNORE_CHANGE_BELOW_USEC) {
         if (state) {
             printf("Falling\n");
-            system("./leds-red.sh");
+            system("reboot");
         } else {
             printf("Rising\n");
-            system("./leds-blue.sh");
         }
 
         state = !state;
@@ -47,7 +46,8 @@ int main(void)
     wiringPiSetup();
 
     // Set pin to output in case it's not
-    pinMode(PIN, OUTPUT);
+    pinMode(PIN, INPUT);
+    pullUpDnControl(PIN, PUD_UP);
 
     // Time now
     gettimeofday(&last_change, NULL);
@@ -60,7 +60,6 @@ int main(void)
 
     if (state) {
         printf("Started! Initial state is on\n");
-        system("reboot");
     } else {
         printf("Started! Initial state is off\n");
     }

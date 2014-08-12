@@ -31,4 +31,6 @@ For final solution, go into the directory: final:
 
     Java code:
         javac ThreadTester.java
+	// Due to reboot will be invoked, so we must use "root" account
+	sudo su
         java ThreadTester

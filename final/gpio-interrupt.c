@@ -45,7 +45,6 @@ int main(void)
     // Init
     wiringPiSetup();
 
-    // Set pin to output in case it's not
     pinMode(PIN, INPUT);
     pullUpDnControl(PIN, PUD_UP);
 

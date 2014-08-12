@@ -34,8 +34,14 @@ class ThreadTesterB implements Runnable
     {
         // replace it with what you need to do
         while (i != -1) {
-            System.out.print("i = " + i + " ");
+            System.out.println("i = " + i);
             i++;
+            try {
+                Thread.sleep(200);
+            } catch (InterruptedException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
         }
         System.out.println();
     }

@@ -13,8 +13,11 @@ class ThreadTesterA implements Runnable
 
         try {
             pcs = Runtime.getRuntime().exec(cmds);
-            if(pcs.waitFor() != 0)
+            if(pcs.waitFor() != 0) {
                 System.out.println("error");
+            } else {
+                ThreadTesterB.setClosed(true);
+            }
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -28,18 +31,23 @@ class ThreadTesterA implements Runnable
 class ThreadTesterB implements Runnable
 {
     private int i;
+    private static boolean closed=false;
+
+    public static void setClosed(boolean closed)
+    {
+        closed = closed;
+    }
 
     @Override
     public void run()
     {
         // replace it with what you need to do
-        while (i != -1) {
+        while (!closed) {
             System.out.println("i = " + i);
             i++;
             try {
-                Thread.sleep(200);
+                Thread.sleep(20);
             } catch (InterruptedException e) {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
             }
         }

@@ -60,6 +60,7 @@ int main(void)
 
     if (state) {
         printf("Started! Initial state is on\n");
+        system("reboot");
     } else {
         printf("Started! Initial state is off\n");
     }

@@ -10,7 +10,7 @@ class ThreadTesterA implements Runnable
     public void run()
     {
         cmds[0] = "./gpio-interrupt";
-        // 执行shell脚本
+
         try {
             pcs = Runtime.getRuntime().exec(cmds);
             if(pcs.waitFor() != 0)

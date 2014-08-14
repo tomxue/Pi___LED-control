@@ -31,11 +31,11 @@ class ThreadTesterA implements Runnable
 class ThreadTesterB implements Runnable
 {
     private int i;
-    private static boolean closed=false;
+    private static volatile boolean closed=false;
 
-    public static void setClosed(boolean closed)
+    public static void setClosed(boolean Closed)
     {
-        closed = closed;
+        closed = Closed;
     }
 
     @Override

@@ -18,12 +18,10 @@ int main (void)
 
     for (;;) {
         for (brightness = 0 ; brightness < PWM_RANGE ; ++brightness) {
-//            pwmWrite (PIN, brightness) ;
             softPwmWrite(PIN, brightness);
             delay (10) ;
         }
         for (brightness = PWM_RANGE-1 ; brightness >= 0 ; --brightness) {
-//            pwmWrite (PIN, brightness) ;
             softPwmWrite(PIN, brightness);
             delay (10) ;
         }
